@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Wale Hunter</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/timer.scss">
+
+    <!-- responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- awesome fontfamily -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.2/css/tabulator.min.css">
+
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
+
+<body class="main-layout">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="" /></div>
+    </div>
+    <!-- end loader -->
+    <!-- 
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="searvices.html">Searvices</a>
+        <a href="testimonial.html">Testimonial</a>
+        <a href="works.html">Works</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="head-top">
+            <div class="container-fluid">
+                <div class="row d_flex">
+                    <div class="col-sm-3">
+                        <div class="logo">
+                            <a href="index.html">Whale Hunter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <!-- start slider section -->
+    <div id="top_section" class=" banner_main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="carousel-caption relative">
+                                        <div class="row d_flex">
+                                            <div class="col-md-6">
+                                                <div class="con_img">
+                                                    <figure><img class="img_responsive" src="images/walehunterlogo.png" alt="#" style="height: 350px; " /></figure>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="bluid">
+                                                    <h2>Tool to scan and compare the percentage of the price of cryptocurrencies.</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end slider section -->
+    <!-- about -->
+    <div id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="about_border">
+                        <div class="row" style="color: #FFF">
+                            <div class="col-md-3">
+                                <label for="inputEmail4">Interval/seconds</label>
+                                <input type="text" class="form-control" placeholder="60" id="intervalValue">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="inputEmail4">Expected percentage change</label>
+                                <input type="text" class="form-control" placeholder="0.2" id="expectedPercentageV">
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary" style="margin-top: 33px;" onclick="setOptions()">Change</button>
+                            </div>
+                            <div class="col-md-3">
+                                <svg class="timer">
+                                    <circle class="progress-frame" cx="100" cy="100" r="30"></circle>
+                                    <circle class="progress" cx="100" cy="100" r="25"></circle>
+                                </svg>
+                                <div class="time">
+                                    <p><span class="seconds" id="timerCirc"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="cTable" class="tbl-header" style="padding: 20px;margin-top: 20px;color: white;height: 80vh;overflow: scroll;">
+                            <table id="currenci_table"></table>
+                        </div>
+                        <audio id="audio" controls style="display: none;">
+                                <source type="audio/wav" src="bell.mp3" >
+                            </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end about -->
+    <!-- testimonial -->
+    <div class="testimonial">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="border_testi">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="titlepage text_align_center">
+                                    <h2>¿How does it work?
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row d_flex">
+                            <div class="col-md-10 offset-md-1">
+                                <div id="testimo" class="carousel slide our_testimonial" data-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="container">
+                                                <div class="carousel-caption posi_in">
+                                                    <div class="row">
+                                                        <div class="col-md-3">
+                                                            <div class="testomoniam_text text_align_center">
+                                                                <i><img src="images/fisherman.png" alt="#"/></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-9">
+                                                            <div class="testomoniam_text text_align_left">
+                                                                <p><b>Whale Hunter</b> is a tool that calculates the price of a cryptocurrency and compares it against an expected percentage, this in order to be able to have an alert when an asset is moving
+                                                                    quickly. The following development is an experiment and it is not advised to do operations with it, use it at your own risk and draw your own conclusions. Currently it only operates by
+                                                                    reviewing the price of coins in Binance futures, in case you want other assets or exchanges, contact:<span style="display: inline;"><a style="color: #face34;" href="https://twitter.com/FighterValue" target="_blank"> CryptoValueFighter</a></span></p>
+                                                                <br>
+                                                                <ul>
+                                                                    <li> <span><b>Interval/seconds:</b> The duration time between each price query</span></li>
+                                                                    <li> <span><b>Expected percentage change:</b> Variation of the percentage calculated with the last reported price</span></li>
+                                                                    <li><span><b>Candidate:</b> It is the asset that complies with the rule of being above the expected percentage, in the table you can see some fire emojis 🔥, which are multiplied according
+                                                                        to the times that the asset exceeds the expected percentage.</span></li>
+                                                                </ul>
+                                                                <p>
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end testimonial -->
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="copyright text_align_center ">
+                <div class="container ">
+                    <div class="row ">
+                        <div class="col-md-12 ">
+                            <p>cryptovaluefighter
+                                <a href=""> </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js "></script>
+    <script src="js/bootstrap.bundle.min.js "></script>
+    <script src="js/jquery-3.0.0.min.js "></script>
+    <script src="js/custom.js "></script>
+    <script src="js/binance_call_api.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.2/js/tabulator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/5.4.2/css/tabulator_bootstrap4.min.css"></script>
+
+</body>
+
+</html>
