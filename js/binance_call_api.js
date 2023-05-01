@@ -25,8 +25,6 @@ var settingsCurrency = {
 };
 
 $.ajax(settingsCurrency).done(function(response) {
-
-    console.log(response.symbols)
     var currencies = []
     response.symbols.forEach(function(item, index) {
         if (item.status == "TRADING") {
@@ -204,9 +202,6 @@ $.ajax(settingsCurrency).done(function(response) {
                         prospect = ""
                     }
                 }
-                console.log("percent != NaN")
-                console.log(percent != NaN)
-
                 if (percent != NaN) {
                     tabledata.push({ "Symbol": item.toString(), "Price": response.price, "UP/DOWN": flag, "percentD": percent, "Candidate": prospect, "Link": linkb })
                     tableTabulator.updateOrAddRow(index, { "Symbol": item.toString(), "Price": response.price, "UP/DOWN": flag, "percentD": percent, "Candidate": prospect, "Link": linkb })
