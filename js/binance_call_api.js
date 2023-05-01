@@ -29,7 +29,9 @@ $.ajax(settingsCurrency).done(function(response) {
     console.log(response.symbols)
     var currencies = []
     response.symbols.forEach(function(item, index) {
-        currencies.push(item.symbol)
+        if (item.status == "TRADING") {
+            currencies.push(item.symbol)
+        }
     })
 
 
